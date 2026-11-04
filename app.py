@@ -18,7 +18,7 @@ st.set_page_config(
 
 load_dotenv()
 
-api_key = os.getenv("GEMINI_API_KEY")
+api_key = st.secrets["GEMINI_API_KEY"]
 
 if not api_key:
     st.error("GEMINI_API_KEY is missing. Check your .env file.")
